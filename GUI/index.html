@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Basic's Tools</title>
+        <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+        <script src="randomNumGenerator.js"></script>
+        <script src="wordChooser.js"></script>
+        <script src="addChoice.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Basic's Tools</h1>
+            <hr color="white">
+            <h2>Random Number Generator</h2>
+
+            <table style="table-layout: auto;">
+                <tr>
+                    <td width="100px">Max Number</td>
+                    <td style="width: auto;"><input id="inputMax" type="number" value="10" min="0" max="999999999"></td>
+                </tr>             
+                <tr>
+                    <td>Min Number</td>
+                    <td><input id="inputMin" type="number" value="0" min="0" max="999999999"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button id="ranNum" onclick="randomNum()" style="width: 100%;">Generate Number</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>Output: </div>
+                    </td>
+                    <td align="center">
+                        <u><div id="output"></div></u>
+                    </td>
+                </tr>        
+            </table>
+            <div id="ranNumError" style="color: red;"></div>
+
+            <hr color="white">
+            <h2>Chooser</h2>
+            <img src="img/plus.png" width="20" height="20" onclick="addchoice()" style="margin-bottom: 10;">
+            <div id="chooserSpace">
+                <!-- This div will be filled with the generated input boxes for the choices  -->
+                <Table id="chooserTable">
+                    <tr id="Choice1"><td><input type="text" size="10" value="Choice 1"></td> <td>
+                        <img src="img/minus.png" width="20" height="20" style="margin-left: 10;" onclick="removeElement(Choice1)"></td></tr>
+
+                    <tr id="Choice2"><td><input type="text" size="10" value="Choice 2"></td></tr>
+
+                    <tr id="Choice3"><td><input type="text" size="10" value="Choice 3"></td></tr>
+                </Table>
+            </div>
+            
+        </div>
+    </body>
+    <script>
+        console.log(process);
+    </script>
+    <script>
+        require('./renderer.js');
+    </script>
+</html> 
