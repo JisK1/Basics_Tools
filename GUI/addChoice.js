@@ -3,12 +3,8 @@ var currentNumChoices = 3;
 
 function addchoice(){
 
-    var i = 0;
-
-
     var tr = document.createElement("TR");
     
-
     var inputTD = document.createElement("TD");
 
     var input = document.createElement("input");
