@@ -2,6 +2,8 @@ const {app, BrowserWindow} = require('electron');
 const path = require('path');
 const url = require('url');
 
+//Command line arguments are in process.argv[2] and above
+
 //global reference to the window object.
 let win; 
 
@@ -16,9 +18,11 @@ function createWindow(){
         slashes: true
     }));
 
-    // open devtools
-    win.webContents.openDevTools();
-
+    // open devtools if debug argument is passed
+    if(process.argv[2] === "-debug"){
+        win.webContents.openDevTools();
+    }
+    
     win.on('closed', () => {
         win = null;
     })
