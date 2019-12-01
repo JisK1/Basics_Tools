@@ -38,16 +38,29 @@
 
             <hr color="white">
             <h2>Chooser</h2>
-            <img src="img/plus.png" width="20" height="20" onclick="addchoice()" style="margin-bottom: 10;">
+
+            <button id="chooseBtn" onclick="chooseWord()">Choose a word</button><br>
+            <div id="choosenWord">The chosen one is: </div>
+            <div id="chooserError" style="color: red;"> </div>
+
+            <img src="img/plus.png" width="20" height="20" onclick="addchoice()" style="margin-bottom: 10; margin-top: 10;">
             <div id="chooserSpace">
                 <!-- This div will be filled with the generated input boxes for the choices  -->
                 <Table id="chooserTable">
-                    <tr id="Choice1"><td><input type="text" size="10" value="Choice 1"></td> <td>
-                        <img src="img/minus.png" width="20" height="20" style="margin-left: 10;" onclick="removeElement(Choice1)"></td></tr>
+                    <tr>
+                        <td><input class="chooserInput" type="text" size="10" placeholder="New Choice"></td> 
+                        <td><img src="img/minus.png" width="20" height="20" style="margin-left: 10;" onclick="removeElement(this)"></td>
+                    </tr>
 
-                    <tr id="Choice2"><td><input type="text" size="10" value="Choice 2"></td></tr>
+                    <tr>
+                        <td><input class="chooserInput" type="text" size="10" placeholder="New Choice"></td>
+                        <td><img src="img/minus.png" width="20" height="20" style="margin-left: 10;" onclick="removeElement(this)"></td>
+                    </tr>
 
-                    <tr id="Choice3"><td><input type="text" size="10" value="Choice 3"></td></tr>
+                    <tr>
+                        <td><input class="chooserInput" type="text" size="10" placeholder="New Choice"></td>
+                        <td><img src="img/minus.png" width="20" height="20" style="margin-left: 10;" onclick="removeElement(this)"></td>
+                    </tr>
                 </Table>
             </div>
             

@@ -2,34 +2,37 @@
 var currentNumChoices = 3;
 
 function addchoice(){
-    //Array to store all items of the list 
-    var currentChoices = [];
 
-    //The string which will contain the html to be displayed in the chooserTable.
-    var tableString = "";
+    var i = 0;
 
-    for(var i = 1; i < currentNumChoices + 1; i++){
-        currentChoices.push(document.getElementById("Choice" + i).innerHTML);
-    }
 
-    //add all the choices into the tableString
-    for(var j = 0; j < currentChoices.length; j++){
-        tableString = tableString + '<tr id="Choice' + (j+1).toString() + '">' + currentChoices[j] + '</tr>';
-        //console.log(currentChoices[j]);
-    }
-    tableString = tableString + '<tr id="Choice' + (currentChoices.length + 1).toString() + '">' 
-                                + '<td><input type="text" size="10" value="Choice ' + (currentChoices.length + 1).toString() + '"></td></tr>'
-    currentNumChoices++;
+    var tr = document.createElement("TR");
+    
 
-    //update the table with the new contents.
-    console.log(tableString);
+    var inputTD = document.createElement("TD");
 
-    document.getElementById("chooserTable").innerHTML = tableString;
+    var input = document.createElement("input");
+    input.type = "text";
+    input.size = 10;
+    input.placeholder = "New Choice";
+    input.className = "chooserInput";
+
+    var imgTD = document.createElement("TD");
+
+    imgTD.innerHTML = '<img src="img/minus.png" width="20" height="20" style="margin-left: 10;" onclick="removeElement(this)">'
+
+    inputTD.appendChild(input); 
+
+    tr.appendChild(inputTD);
+    tr.appendChild(imgTD);
+
+    document.getElementById("chooserTable").appendChild(tr);
+
 }
 
 //removes the table row 
-function removeElement(elementId) {
-    // Removes an element from the document
-    var element = document.getElementById(elementId);
-    element.parentNode.removeChild(element);
+function removeElement(element) {
+    //gets the tr parent element
+    var trElement = element.parentNode.parentNode;
+    trElement.remove();
 }
