@@ -24,8 +24,6 @@ function randomNum(){
             //set the value of an html element by id.    
         document.getElementById("output").innerHTML = results;
         document.getElementById("ranNumError").innerHTML = "";
-
-            console.log('results', results);
         });
 
     } else{

@@ -3,7 +3,7 @@ function chooseWord(){
 
     var nameList = document.getElementsByClassName("chooserInput");
 
-    if(nameList.length > 2){
+    if(nameList.length > 1){
 
         //Randomly choose a word from the list.
         var theChosenOne = nameList[Math.floor(Math.random() * nameList.length)].value;

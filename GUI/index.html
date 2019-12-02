@@ -43,7 +43,11 @@
             <div id="choosenWord">The chosen one is: </div>
             <div id="chooserError" style="color: red;"> </div>
 
-            <img src="img/plus.png" width="20" height="20" onclick="addchoice()" style="margin-bottom: 10; margin-top: 10;">
+            <button id="removeEmptyBtn" onclick="removeEmptyInputs()">Remove Empty</button>
+            <button id="clearChoices" onclick="clearChoices()">Clear All</button>
+            <input id="inputFile" type="file" accept=".txt" oninput="addChoicesFromFile()"><br>
+            <img src="img/plus.png" width="20" height="20" onclick="addchoice('')" style="margin-bottom: 10; margin-top: 10; margin-right: 10;">
+
             <!--TO DO ADD A FUNCTION TO LOAD THE WORDS FROM A FILE-->
             <div id="chooserSpace">
                 <!-- This div will be filled with the generated input boxes for the choices  -->
