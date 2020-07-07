@@ -9,7 +9,7 @@
   "author": "Josh Basic",
   "license": "ISC",
   "dependencies": {
-    "electron": "^7.1.2",
+    "electron": "^7.2.4",
     "python-shell": "^1.0.8"
   }
 }
